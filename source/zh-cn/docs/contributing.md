@@ -8,20 +8,19 @@ title: 贡献
 
 请遵守以下准则：
 
-- 遵守 [Google JavaScript 代码风格](https://google.github.io/styleguide/jsguide.html)。
+- 代码需要通过 Eslint 规范检查。
 - 使用 2 个空格缩排。
 - 不要把逗号放在最前面。
 
 ### 工作流程
 
-1. Fork [hexojs/hexo]
+1. Fork [tianyong90/we-vue]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
     {% code %}
-    $ git clone https://github.com/<username>/hexo.git
-    $ cd hexo
+    $ git clone https://github.com/<username>/we-vue.git
+    $ cd we-vue
     $ npm install
-    $ git submodule update --init
     {% endcode %}
 
 3. 新增一个功能分支。
@@ -42,28 +41,25 @@ title: 贡献
 ### 注意事项
 
 - 不要修改 `package.json` 的版本号。
-- 只有在测试通过的情况下您的合并申请才会被批准，在提交前别忘了进行测试。
-
-    {% code %}
-    $ npm test
-    {% endcode %}
+- 代码必须通过 Eslint 代码规范检查，并请保留一些必要的注释。
+- 请不要对开发分支进行构建操作，即执行 `npm run build` 及相关命令。
 
 ## 更新文档
 
-Hexo 文档开放源代码，您可以在 [hexojs/site] 找到源代码。
+本文档开放源代码，您可以在 [tianyong90/we-vue-docs-site] 找到源代码。
 
 ### 工作流程
 
-1. Fork [hexojs/site]
+1. Fork [tianyong90/we-vue-docs-site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
     {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
+    $ git clone https://github.com/<username>/we-vue-docs-site.git
+    $ cd we-vue-docs-site
     $ npm install
     {% endcode %}
 
-3. 开始编辑文件，您可以通过服务器预览变动。
+3. 开始编辑文件，您可以通过服务器预览变动,项目中安装了 hexo-browsersync 插件，当有修改保存后可自动刷新浏览器。
 
     {% code %}
     $ hexo server
@@ -81,11 +77,10 @@ Hexo 文档开放源代码，您可以在 [hexojs/site] 找到源代码。
 
 ## 反馈问题
 
-当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。如果你没有找答案，请在 Github 报告它。
+当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/tianyong90/we-vue/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。如果你没有找答案，请在 Github 报告它。
 
-1. 在 [调试模式](commands.html#调试模式) 中重现问题。
-2. 运行 `hexo version` 并检查版本信息。
-3. 把调试信息和版本信息都贴到 GitHub。
+1. 描述具体问题及重现步骤。
+3. 附上相关代码及调试信息。
 
-[hexojs/hexo]: https://github.com/hexojs/hexo
-[hexojs/site]: https://github.com/hexojs/site
+[tianyong90/we-vue]: https://github.com/tianyong90/we-vue
+[tianyong90/we-vue-docs-site]: https://github.com/tianyong90/we-vue-docs-site

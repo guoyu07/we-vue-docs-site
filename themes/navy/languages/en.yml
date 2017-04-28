@@ -46,24 +46,3 @@ sidebar:
     miscellaneous: Miscellaneous
     troubleshooting: Troubleshooting
     contributing: Contributing
-  api:
-    core: Core
-    overview: Overview
-    events: Events
-    locals: Locals
-    router: Router
-    box: Box
-    rendering: Rendering
-    posts: Posts
-    scaffolds: Scaffolds
-    themes: Themes
-    extensions: Extensions
-    console: Console
-    deployer: Deployer
-    filter: Filter
-    generator: Generator
-    helper: Helper
-    migrator: Migrator
-    processor: Processor
-    renderer: Renderer
-    tag: Tag

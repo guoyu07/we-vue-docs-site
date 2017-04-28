@@ -1,26 +1,28 @@
 <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="{{ url_for_lang('') }}" id="logo">Hexo</a>
+      <a href="{{ url_for_lang('') }}" id="logo">WE-VUE</a>
     </h1>
     <nav id="main-nav">
       {{ header_menu('main-nav') }}
-      <a href="https://github.com/{{ config.github }}" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <a href="https://github.com/{{ config.github }}" target="new" class="main-nav-link">GitHub</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
         </div>
-        <input type="search" id="search-input" placeholder="Search...">
+        <input type="search" id="search-input" placeholder="搜索...">
       </div>
     </nav>
-    <div id="lang-select-wrap">
-      <label id="lang-select-label"><i class="fa fa-globe"></i><span>{{ lang_name(page.lang) }}</span></label>
-      <select id="lang-select" data-canonical="{{ canonical_path_for_nav() }}">
-        {% for lang in site.data.languages %}
-          <option value="{{ loop.key }}"{% if page.lang === loop.key %} selected{% endif %}>{{ lang_name(loop.key) }}</option>
-        {% endfor %}
-      </select>
-    </div>
+    {% if config.multi_language %}
+      <div id="lang-select-wrap">
+        <label id="lang-select-label"><i class="fa fa-globe"></i><span>{{ lang_name(page.lang) }}</span></label>
+        <select id="lang-select" data-canonical="{{ canonical_path_for_nav() }}">
+          {% for lang in site.data.languages %}
+            <option value="{{ loop.key }}"{% if page.lang === loop.key %} selected{% endif %}>{{ lang_name(loop.key) }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
     <a id="mobile-nav-toggle">
       <span class="mobile-nav-toggle-bar"></span>
       <span class="mobile-nav-toggle-bar"></span>

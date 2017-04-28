@@ -1,4 +1,4 @@
-# Hexo Official Website
+# WE-VUE 文档站
 <!-- Markdown snippet -->
 [![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
@@ -9,8 +9,8 @@ The website for Hexo. You can see the generated files at [hexojs/hexojs.github.i
 Install dependencies:
 
 ``` bash
-$ git clone https://github.com/hexojs/site.git
-$ cd site
+$ git clone https://github.com/tianyong90/we-vue-docs-site.git
+$ cd we-vue-docs-site
 $ npm install
 ```
 
@@ -26,17 +26,7 @@ Run server:
 $ hexo server
 ```
 
-## Contributors
-
-- English - [tommy351](https://github.com/tommy351)
-- 正體中文 - [tommy351](https://github.com/tommy351)
-- 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
-- Русский - [twirlfog](https://github.com/twirlfog)
-- 한국어 - [lazyrodi](https://github.com/lazyrodi)
-
 ## License
 
 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
-[tommy351]: https://github.com/tommy351
-[pinggod]: https://github.com/pinggod

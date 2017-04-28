@@ -1,8 +1,9 @@
 title: WE-VUE
-subtitle: "A fast, simple & powerful blog framework powered by Node.js."
-description: "Hexo is a fast, simple & powerful blog framework powered by Node.js."
-author: Yong Tian
+subtitle: "weui1.x + vue2.x + webpack2 = we-vue"
+description: "一套简洁高效的 weui 样式的 vue 组件库"
+author: tianyong90
 language: zh-cn
+multi_language: false
 timezone: Asia/Shanghai
 url: http://docs.wevue.org
 root: /
@@ -21,7 +22,7 @@ deploy:
   type: git
   repo: git@github.com:hexojs/hexojs.github.io.git
 
-disqus_shortname: hexojs
+disqus_shortname: false
 google_analytics: UA-4910098-10
 fb_admins: 100000247608790
 algolia:
@@ -34,6 +35,30 @@ algolia:
   zh-cn:
     api_key: cdea7d4e47d84f6145b77e7f68689f35
     index_name: hexo_zh-cn
-twitter: hexojs
-weibo: hexojs
-github: hexojs/hexo
+twitter:
+weibo: 1707227001
+github: tianyong90/we-vue
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji  # add emoji
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶

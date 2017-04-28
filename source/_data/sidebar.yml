@@ -1,49 +1,42 @@
 docs:
   getting_started:
     overview: index.html
-    setup: setup.html
-    configuration: configuration.html
-    commands: commands.html
-    migration: migration.html
-  basic_usage:
-    writing: writing.html
-    front_matter: front-matter.html
-    tag_plugins: tag-plugins.html
-    asset_folders: asset-folders.html
-    data_files: data-files.html
-    server: server.html
-    generating: generating.html
-    deployment: deployment.html
-  customization:
-    permalinks: permalinks.html
-    themes: themes.html
-    templates: templates.html
-    variables: variables.html
-    helpers: helpers.html
-    internationalization: internationalization.html
-    plugins: plugins.html
+    quickstart: quickstart.html
+  components:
+    Badge: badge.html
+    Circle: circle.html
+    Icons: icons.html
+    Lazyload: lazyload.html
+    Progress: progress.html
+    Slider: slider.html
+    Spinner: spinner.html
+    Swipe: swipe.html
+    Button: button.html
+    Checklist: check_list.html
+    Input: input.html
+    Radio: radio.html
+    Switch: switch.html
+    Textarea: textarea.html
+    Preview: preview.html
+    ActionSheet: action_sheet.html
+    Dialog: dialog.html
+    Indicator: indicator.html
+    Toast: toast.html
+    TopTips: top_tips.html
+    Picker: picker.html
+    DatetimePicker: datetime_picker.html
+    Header: header.html
+    Navbar: navbar.html
+    Tabbar: tabbar.html
+    Search: search.html
+    Cell: cell.html
+    CellSwipe: cell_swipe.html
+    Flex: flex.html
+    Footer: footer.html
+    Grid: grid.html
+    Loadmore: loadmore.html
+    Panel: panel.html
+    Popup: popup.html
   miscellaneous:
     troubleshooting: troubleshooting.html
     contributing: contributing.html
-
-api:
-  core:
-    overview: index.html
-    events: events.html
-    locals: locals.html
-    router: router.html
-    box: box.html
-    rendering: rendering.html
-    posts: posts.html
-    scaffolds: scaffolds.html
-    themes: themes.html
-  extensions:
-    console: console.html
-    deployer: deployer.html
-    filter: filter.html
-    generator: generator.html
-    helper: helper.html
-    migrator: migrator.html
-    processor: processor.html
-    renderer: renderer.html
-    tag: tag.html

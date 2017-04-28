@@ -10,6 +10,7 @@
       {{ doc_sidebar('mobile-nav') }}
     {% endif %}
   </div>
+  {% if config.multi_language %}
   <div id="mobile-lang-select-wrap">
     <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>{{ lang_name(page.lang) }}</span></span>
     <select id="mobile-lang-select" data-canonical="{{ canonical_path_for_nav() }}">
@@ -18,4 +19,5 @@
       {% endfor %}
     </select>
   </div>
+  {% endif %}
 </nav>

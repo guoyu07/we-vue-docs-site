@@ -1,8 +1,8 @@
-<header id="banner" class="wrapper">
+<header id="banner">
   <div class="inner">
     <h2 id="banner-title">{{ page.subtitle }}</h2>
     <div id="banner-start">
-      <span id="banner-start-command">npm install hexo-cli -g</span><a id="banner-start-link" href="docs/"><i class="fa fa-arrow-right"></i></a>
+      <span id="banner-start-command">npm install we-vue --save</span><a id="banner-start-link" href="docs/"><i class="fa fa-arrow-right"></i></a>
     </div>
     <div id="banner-share">{{ partial('partial/share') }}</div>
   </div>
@@ -11,15 +11,11 @@
   <div class="wrapper">
     <div class="inner">
       {{ page.content }}
-      <ul id="intro-cmd-wrap">
-        <li class="intro-cmd-item">npm install we-vue --save</li>
-        <li class="intro-cmd-item">hexo init blog</li>
-        <li class="intro-cmd-item">cd blog</li>
-        <li class="intro-cmd-item">npm install</li>
-        <li class="intro-cmd-item">hexo server</li>
-      </ul>
+      <div id="demo-qrcode">
+        <img class="qrcode" src="/image/demo_qrcode.png"/>
+      </div>
       <div id="intro-get-started-wrap">
-        <a href="docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
+        <a href="http://demo.wevue.org" id="intro-get-started-link">查看示例</a>
       </div>
     </div>
   </div>
