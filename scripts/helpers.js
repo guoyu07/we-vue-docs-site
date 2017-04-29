@@ -6,7 +6,7 @@ var url = require('url');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
 
-var localizedPath = ['docs', 'api'];
+var localizedPath = ['docs'];
 
 function startsWith(str, start){
   return str.substring(0, start.length) === start;
@@ -97,7 +97,7 @@ hexo.extend.helper.register('url_for_lang', function(path){
 });
 
 hexo.extend.helper.register('raw_link', function(path){
-  return 'https://github.com/hexojs/site/edit/master/source/' + path;
+  return 'https://github.com/tianyong90/we-vue-docs-site/edit/master/source/' + path;
 });
 
 hexo.extend.helper.register('page_anchor', function(str){

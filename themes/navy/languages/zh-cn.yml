@@ -17,6 +17,7 @@ page:
 
 sidebar:
   docs:
+    getting_started: 开始使用
     overview: 概述
     quickstart: 快速上手
     components: 组件
@@ -54,5 +55,6 @@ sidebar:
     Loadmore: Loadmore
     Panel: Panel
     Popup: Popup
+    miscellaneous: 其他
     troubleshooting: 问题解答
     contributing: 贡献
