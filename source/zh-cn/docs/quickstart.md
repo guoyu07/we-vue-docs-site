@@ -10,6 +10,9 @@ vue init webpack <your_projectname>
 
 ### 引入 WeVue
 
+
+#### 完整引入
+
 在入口文件 main.js 中编写如下内容：
 
 ```js
@@ -22,7 +25,57 @@ Vue.use(WeVue)
 
 new Vue({
   el: '#app',
-  components: { App }
+  render: h => h(App)
 })
 ```
-如此即完成了 WeVue 的引入，
+如此即完成了 WeVue 的引入。
+
+#### 按需引入
+可以借助 babel-plugin-component实现按需引入，以减小项目体积。
+首先，安装 babel-plugin-component:
+
+```shell
+npm install babel-plugin-component -D
+```
+
+然后修改 .babelrc:
+
+```
+{
+  "presets": [
+    ["es2015", { "modules": false }]
+  ],
+  "plugins": [["component", [
+    {
+      "libraryName": "we-vue",
+      "style": true
+    }
+  ]]]
+}
+```
+
+配置完成之后便可以按需引入需要的组件，例如引入 Group 和 Cell，代码如下:
+
+```js
+import Vue from 'vue'
+import { Group, Cell } from 'we-vue'
+import App from './App.vue'
+
+Vue.component(Group.name, Group)
+Vue.component(Cell.name, Cell)
+/* 或写为
+ * Vue.use(Group)
+ * Vue.use(Cell)
+ */
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+})
+```
+
+### 开始使用
+
+运行 `npm run dev` 启动本地服务器进行开发。
+
+运行 `npm run build` 进行编译。
