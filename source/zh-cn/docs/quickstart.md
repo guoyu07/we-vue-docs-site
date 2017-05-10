@@ -2,16 +2,16 @@ title: 快速上手
 ---
 本文将介绍如果在项目中使用 WeVue。
 
-### 创建一个 vue.js 项目，我们使用 Vue 官方肢手架工具 vue-cli
+## 创建一个 vue.js 项目，我们使用 Vue 官方肢手架工具 vue-cli
 ```bash
 npm install -g vue-cli
 vue init webpack <your_projectname>
 ```
 
-### 引入 WeVue
+## 引入 WeVue
 
 
-#### 完整引入
+### 完整引入
 
 在入口文件 main.js 中编写如下内容：
 
@@ -30,7 +30,7 @@ new Vue({
 ```
 如此即完成了 WeVue 的引入。
 
-#### 按需引入
+### 按需引入
 可以借助 babel-plugin-component实现按需引入，以减小项目体积。
 首先，安装 babel-plugin-component:
 
@@ -74,7 +74,7 @@ new Vue({
 })
 ```
 
-### 开始使用
+## 开始使用
 
 运行 `npm run dev` 启动本地服务器进行开发。
 
