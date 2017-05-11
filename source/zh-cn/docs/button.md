@@ -50,7 +50,7 @@ Vue.component(Button.name, Button)
 <wv-button type="warn" :mini="true">按钮</wv-button>
 ```
 
-API
+## API
 
 |     参数     |   类型    |   说明    |         可选值          |   默认值   |
 | :--------: | :-----: | :-----: | :------------------: | :-----: |

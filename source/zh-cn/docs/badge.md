@@ -29,7 +29,7 @@ Vue.component(Badge.name, Badge)
 <wv-badge :is-dot="true"></wv-badge>
 ```
 
-API
+## API
 
 |   参数   |   类型    |   说明   | 可选值  |  默认值  |
 | :----: | :-----: | :----: | :--: | :---: |
