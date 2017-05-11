@@ -21,6 +21,7 @@ theme: navy
 deploy:
   type: git
   repo: git@github.com:tianyong90/wevue.org.git
+  branch: master
 
 disqus_shortname: false
 google_analytics:
