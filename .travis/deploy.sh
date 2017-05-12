@@ -22,4 +22,4 @@ git add -A
 git commit -m "copy docs"
 git push origin
 # Deploy to GitHub
-npm run deploy -g
+npm run deploy

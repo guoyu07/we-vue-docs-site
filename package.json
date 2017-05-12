@@ -6,7 +6,7 @@
     "version": "3.3.5"
   },
   "scripts": {
-    "build": "hexo generate && gulp",
+    "build": "hexo generate",
     "deploy": "hexo deploy"
   },
   "dependencies": {
