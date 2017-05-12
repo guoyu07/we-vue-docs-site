@@ -42,9 +42,9 @@ script:
 - git push origin
 - npm run build
 - npm run deploy
-# deploy:
-#   provider: script
-#   script: .travis/deploy.sh
-#   skip_cleanup: true
-#   on:
-#     branch: master
+deploy:
+  provider: script
+  script: .travis/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
