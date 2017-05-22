@@ -1,8 +1,8 @@
 # WE-VUE 文档站
 <!-- Markdown snippet -->
-[![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
+[![Build Status](https://travis-ci.org/tianyong90/we-vue-docs-site.svg?branch=master)](https://travis-ci.org/tianyong90/we-vue-docs-site)
 
-The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
+The website for wv-vue.
 
 ## Getting started
 
@@ -29,4 +29,3 @@ $ hexo server
 ## License
 
 [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-
