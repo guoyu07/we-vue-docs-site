@@ -15,11 +15,5 @@ git config --global user.name "tianyong90"
 git config --global user.email 412039588@qq.com
 ## Clone the repository
 #git clone git@github.com:tianyong90/wevue.org.git .deploy_git
-# 复制中文文档到默认文档目录
-cp -rf source/zh-cn/docs/ source/docs/
-# 提交修改
-git add -A
-git commit -m "copy docs"
-git push origin
 # Deploy to GitHub
 npm run deploy
