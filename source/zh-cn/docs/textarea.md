@@ -1,6 +1,6 @@
 title: Textarea
 ---
-文本域。
+文本框。
 
 ## 引入
 
@@ -41,7 +41,7 @@ Vue.component(Textarea.name, Textarea)
 
 |   参数   |   类型    |   说明   | 可选值  |  默认值  |
 | :----: | :-----: | :----: | :--: | :---: |
-| placeholder  | String  |  点位提示   |      |       |
+| placeholder  | String  |  占位提示   |      |       |
 | rows  | Number  |  行数   |      |   3    |
 | max-length  | Number/String  |  最大字数   |      |   100    |
 | show-counter  | Boolean  |  是否显示字数提示   |      |   true    |

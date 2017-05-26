@@ -59,7 +59,7 @@ export default {
 | :----: | :-----: | :----: | :--: | :---: |
 | autofocus  | Boolean  |  自动激活输入框   |      |   false    |
 | show  | Boolean  |  始终显示结果列表   |      |   false    |
-| placeholder  | String  |  点位提示文字   |      |   '搜索'    |
+| placeholder  | String  |  占位提示文字   |      |   '搜索'    |
 | cancel-text  | String  |  取消按钮文字   |      |   '取消'    |
 | result  | Array  |  结果   |      |     |
 
