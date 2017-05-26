@@ -1,4 +1,4 @@
-title: Pregress
+title: Progress
 ---
 进度条。
 
