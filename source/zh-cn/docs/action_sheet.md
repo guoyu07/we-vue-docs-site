@@ -1,4 +1,4 @@
-title: 安装
+title: ActionSheet
 ---
 弹出式菜单。
 
