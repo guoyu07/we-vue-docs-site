@@ -24,7 +24,6 @@ docs:
     Toast: toast.html
     TopTips: top_tips.html
     Picker: picker.html
-    DatetimePicker: datetime_picker.html
     Header: header.html
     Navbar: navbar.html
     Tabbar: tabbar.html
