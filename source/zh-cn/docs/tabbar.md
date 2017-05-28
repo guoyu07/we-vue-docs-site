@@ -57,7 +57,7 @@ Vue.component(TabbarItem.name, TabbarItem)
 
 |   参数   |   类型    |   说明   | 可选值  |  默认值  |
 | :----: | :-----: | :----: | :--: | :---: |
-| flex  | Boolean  |  是否固定   |      |   false    |
+| fixed  | Boolean  |  是否固定   |      |   false    |
 
 - tabbar-item
 
