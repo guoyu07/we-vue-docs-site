@@ -17,10 +17,10 @@ Vue.component(Progress.name, Progress)
 <wv-progress :percent="percent2"></wv-progress>
 ```
 
-### 不显示清除按钮
+### 隐藏取消按钮
 
 ```html
-<wv-progress :percent="percent1" :show-clear="false"></wv-progress>
+<wv-progress :percent="percent1" :show-clear="false" @cancel="onCancel"></wv-progress>
 ```
 
 ## API
@@ -29,3 +29,10 @@ Vue.component(Progress.name, Progress)
 | :----: | :-----: | :----: | :--: | :---: |
 | percent  | Number/String  |  百分比值   |      |   |
 | show-clear  | Boolean  |  显示清除按钮   |      | true  |
+
+
+## Events
+
+|   事件名   |   说明    |   参数   |
+| :----: | :-----: | :----: |
+| cancel  | cancel 按钮点击事件  |  当前组件   |

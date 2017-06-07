@@ -17,9 +17,6 @@ highlight:
   line_number: false
 per_page: 0
 
-server:
-  port: 4001
-
 theme: navy
 deploy:
   type: git
