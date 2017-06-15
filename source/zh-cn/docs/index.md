@@ -13,7 +13,7 @@ $ npm install we-vue --save
 
 ## 关于事件绑定
 
-在 Vue 2.0 中，为自定义组件绑定原生事件必须使用 `.native` 修饰符：
+在 Vue 2.x 中，为自定义组件绑定原生事件必须使用 `.native` 修饰符：
 
 ```html
 <my-component @click.native="handleClick">Click Me</my-component>
