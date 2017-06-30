@@ -57,3 +57,4 @@ export default {
 | options  | Array  |  选项   |      |       |
 | value | Array | 当前值 |      |    |
 | max | Number | 最多可选中的项数 |      |    |
+

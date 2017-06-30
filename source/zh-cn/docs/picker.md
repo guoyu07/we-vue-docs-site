@@ -1,6 +1,6 @@
 title: Picker
 ---
-选择器。
+多列选择器。
 
 ## 引入
 
@@ -15,14 +15,12 @@ Vue.component(Picker.name, Picker)
 
 ```html
 <template>
-  <div class="page">
-    <wv-group>
-      <wv-cell title="单列选择器" :value="pickerValue1" is-link @click.native="pickerVisible1 = true"></wv-cell>
-      <wv-cell title="多列选择器" :value="pickerValue1" is-link @click.native="pickerVisible2 = true"></wv-cell>
-    </wv-group>
+  <div class="page page-with-padding">
+    <wv-button @click="ticketPickerShow = true">单列选择器</wv-button>
+    <wv-button @click="dayPickerShow = true">多列选择器</wv-button>
 
-    <wv-picker v-model="pickerVisible1" :slots="slots1"></wv-picker>
-    <wv-picker v-model="pickerVisible2" :slots="slots2"></wv-picker>
+    <wv-picker v-model="ticketPickerShow" :slots="ticketSlots" @change="onChange"></wv-picker>
+    <wv-picker v-model="dayPickerShow" :slots="daySlots" @change="onChange"></wv-picker>
   </div>
 </template>
 
@@ -30,11 +28,11 @@ Vue.component(Picker.name, Picker)
   export default {
     data () {
       return {
-        pickerValue1: '',
-        pickerValue2: '',
-        pickerVisible1: false,
-        pickerVisible2: false,
-        slots1: [
+        ticketValue: [],
+        dayValue: [],
+        ticketPickerShow: false,
+        dayPickerShow: false,
+        ticketSlots: [
           {
             values: [
               '汽车票',
@@ -46,39 +44,37 @@ Vue.component(Picker.name, Picker)
             defaultIndex: 2
           }
         ],
-        slots2: [
+        daySlots: [
           {
             values: [
-              '汽车票',
-              '飞机票',
-              '火车票',
-              '轮船票',
-              '其它'
+              '星期一',
+              '星期二',
+              '星期三',
+              '星期四',
+              '星期五'
             ],
-            defaultIndex: 2
+            defaultIndex: 0
           },
           {
             values: [
-              '汽车票',
-              '飞机票',
-              '火车票',
-              '轮船票',
-              '其它'
+              '上午',
+              '下午'
             ],
-            defaultIndex: 2
+            defaultIndex: 0
           }
         ]
       }
     },
 
     methods: {
+      onChange (picker, value) {
+        this.$nextTick(() => {
+          console.log(picker.getValues())
+        })
+      }
     }
   }
 </script>
-
-<style scoped lang="scss">
-</style>
-
 ```
 
 ## API
@@ -99,3 +95,11 @@ Vue.component(Picker.name, Picker)
 | values  | Array  |  默认按钮文字   |      |   '确定'    |
 | value  | Object  |  当前选中数据   |      |       |
 | value-kay  | String  |  当前选中项 key   |      |       |
+
+## Events
+
+|   事件名   |   说明    |   参数   |
+| :----: | :-----: | :----: |
+| change  | 所选值改变  |  当前组件示例   |
+| confirm  | confirm 按钮点击事件  |     |
+| cancel  | cancel 按钮点击事件  |     |
