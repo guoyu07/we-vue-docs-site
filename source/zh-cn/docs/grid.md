@@ -19,23 +19,21 @@ Vue.component(GridItem.name, GridItem)
 <wv-grid>
   <wv-grid-item to="/">
     <img :src="thumbSmall" slot="icon">
-    GridItem
+    <span slot="label">GridItem</span>
   </wv-grid-item>
   <wv-grid-item to="/">
     <img :src="thumbSmall" slot="icon">
-    GridItem
+    <span slot="label">GridItem</span>
   </wv-grid-item>
   <wv-grid-item to="/">
     <img :src="thumbSmall" slot="icon">
-    GridItem
+    <span slot="label">GridItem</span>
   </wv-grid-item>
   <wv-grid-item to="/">
-    <img :src="thumbSmall" slot="icon">
-    GridItem
+    <span>自定义内容</span>
   </wv-grid-item>
   <wv-grid-item to="/">
-    <img :src="thumbSmall" slot="icon">
-    GridItem
+    <span>自定义内容</span>
   </wv-grid-item>
 </wv-grid>
 ```
@@ -47,3 +45,11 @@ Vue.component(GridItem.name, GridItem)
 |     参数     |   类型    |   说明    |         可选值          |   默认值   |
 | :--------: | :-----: | :-----: | :------------------: | :-----: |
 |    to    | String  |   点击后跳转目标地址    |  |  |
+
+## Slots
+
+|   name   |   描述    |
+| :----: | :-----: |
+| -  | 默认，当无 icon 和 label 时可在此插入自定义内容  |
+| icon  | icon 插座  |
+| label  | label 插座  |
