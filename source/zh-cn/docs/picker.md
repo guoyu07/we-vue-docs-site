@@ -77,6 +77,11 @@ Vue.component(Picker.name, Picker)
 </script>
 ```
 
+### 省市区三级联动
+
+**省市区三级联运示例代码较多，不便于在文档中显示和查看，建议查看[相应示例的源码](https://github.com/tianyong90/we-vue/blob/master/example/pages/picker.vue)**
+
+
 ## API
 
 - picker

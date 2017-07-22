@@ -20,7 +20,12 @@ sidebar:
     getting_started: 开始使用
     overview: 概述
     quickstart: 快速上手
-    components: 组件
+    basic_components: 基础组件
+    form_components: 表单组件
+    react_components: 操作反馈
+    nav_components: 导航组件
+    search_components: 搜索相关
+    layout_components: 布局组件
     Badge: Badge
     Circle: Circle
     Icons: Icons

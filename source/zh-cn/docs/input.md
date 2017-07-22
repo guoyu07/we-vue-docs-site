@@ -26,8 +26,9 @@ Vue.component(Input.name, Input)
 
 ```html
 <wv-group title="带验证">
-  <wv-input label="请输入 abc" placeholder="请输入 abc" v-model="valueText" pattern="^abc$"></wv-input>
-  <wv-input label="必填" placeholder="请输入数字" type="number" v-model="valueNumber" required></wv-input>
+  <wv-input label="请输入 abc" placeholder="请输入 abc" v-model="valueText" pattern="^abc$" :validate-mode="{onFocus: false}"></wv-input>
+  <wv-input label="必填字段" placeholder="请输入内容" v-model="valueRequired" required></wv-input>
+  <wv-input label="失焦时验证" placeholder="请输入内容" v-model="valueOnBlur" required :validate-mode="{onFocus: false, onBlur: true, onChange: false}"></wv-input>
 </wv-group>
 ```
 
@@ -79,7 +80,7 @@ Vue.component(Input.name, Input)
 | disabled | Boolean | 是否禁用 |      | false |
 | readonly | Boolean | 是否只读 |      | false |
 | required | Boolean | 是否必填 |      | false |
-| novalidate | Boolean | 无数据验证 |      | false |
+| validate-mode | Object | 验证触发条件 |      | {onFocus: true, onBlur: true, onChange: true} |
 | pattern | String | 验证规则（正则表达式） |      |  |
 
 ## Slots

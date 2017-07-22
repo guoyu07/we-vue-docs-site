@@ -2,7 +2,7 @@ docs:
   getting_started:
     overview: index.html
     quickstart: quickstart.html
-  components:
+  basic_components:
     Badge: badge.html
     Circle: circle.html
     Icons: icons.html
@@ -11,6 +11,7 @@ docs:
     Slider: slider.html
     Spinner: spinner.html
     Swipe: swipe.html
+  form_components:
     Button: button.html
     Checklist: check_list.html
     Input: input.html
@@ -18,16 +19,20 @@ docs:
     Switch: switch.html
     Textarea: textarea.html
     Preview: preview.html
+  react_components:
     ActionSheet: action_sheet.html
     Dialog: dialog.html
     Indicator: indicator.html
     Toast: toast.html
     TopTips: top_tips.html
     Picker: picker.html
+  nav_components:
     Header: header.html
     Navbar: navbar.html
     Tabbar: tabbar.html
+  search_components:
     Search: search.html
+  layout_components:
     Cell: cell.html
     CellSwipe: cell_swipe.html
     Flex: flex.html
