@@ -21,28 +21,47 @@ sidebar:
   docs:
     getting_started: Getting Started
     overview: Overview
-    setup: Setup
-    configuration: Configuration
-    commands: Commands
-    migration: Migration
-    basic_usage: Basic Usage
-    writing: Writing
-    front_matter: Front-matter
-    tag_plugins: Tag Plugins
-    asset_folders: Asset Folders
-    data_files: Data Files
-    server: Server
-    generating: Generating
-    deployment: Deployment
-    customization: Customization
-    permalinks: Permalinks
-    themes: Themes
-    structure: Structure
-    templates: Templates
-    variables: Variables
-    helpers: Helpers
-    internationalization: Internationalization (i18n)
-    plugins: Plugins
-    miscellaneous: Miscellaneous
-    troubleshooting: Troubleshooting
-    contributing: Contributing
+    quickstart: Quick Start
+    basic_components: Basic Comments
+    form_components: Norm Components
+    react_components: Neact Components
+    nav_components: Nav Components
+    search_components: Nearch Components
+    layout_components: Nayout Components
+    Badge: Badge
+    Circle: Circle
+    Icons: Icons
+    Lazyload: Lazyload
+    Progress: Progress
+    Slider: Slider
+    Spinner: Spinner
+    Swipe: Swipe
+    Button: Button
+    Checklist: Checklist
+    Input: Input
+    Radio: Radio
+    Switch: Switch
+    Textarea: Textarea
+    Preview: Preview
+    ActionSheet: ActionSheet
+    Dialog: Dialog
+    Indicator: Indicator
+    Toast: Toast
+    TopTips: TopTips
+    Picker: Picker
+    DatetimePicker: DatetimePicker
+    Header: Header
+    Navbar: Navbar
+    Tabbar: Tabbar
+    Search: Search
+    Cell: Cell
+    CellSwipe: CellSwipe
+    Flex: Flex
+    Footer: Footer
+    Grid: Grid
+    Loadmore: Loadmore
+    Panel: Panel
+    Popup: Popup
+    miscellaneous: 其他
+    troubleshooting: 问题解答
+    contributing: 贡献

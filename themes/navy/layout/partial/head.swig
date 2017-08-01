@@ -45,4 +45,13 @@
   {{ partial('google_analytics') }}
   <!-- Github Button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?31fd32d95c161e075283cca04925ce8c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
