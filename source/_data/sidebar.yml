@@ -23,6 +23,7 @@ docs:
     ActionSheet: action_sheet.html
     Dialog: dialog.html
     Indicator: indicator.html
+    InfiniteScroll: infinite_scroll.html
     Toast: toast.html
     TopTips: top_tips.html
     Picker: picker.html

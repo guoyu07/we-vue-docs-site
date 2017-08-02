@@ -1,6 +1,7 @@
 title: WE-VUE
 subtitle: "weui1.x + vue2.x + webpack2 = we-vue"
-description: "一套简洁高效的 weui 样式的 vue 组件库"
+keywords: "we-vue,vue.js,vue,weui,vue组件,微信组件"
+description: "we-vue 是一套简洁高效的 vue 组件库，封装了 weui.css，其一系列组件适合微信等移动端 web 应用开发。"
 author: tianyong90
 language: zh-cn
 multi_language: false

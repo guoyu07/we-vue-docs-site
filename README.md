@@ -1,4 +1,7 @@
 # WE-VUE 文档站
+
+[查看地址](http://wevue.org)
+
 <!-- Markdown snippet -->
 [![Build Status](https://travis-ci.org/tianyong90/we-vue-docs-site.svg?branch=master)](https://travis-ci.org/tianyong90/we-vue-docs-site)
 
