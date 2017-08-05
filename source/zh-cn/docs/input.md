@@ -88,3 +88,13 @@ Vue.component(Input.name, Input)
 |   name   |   描述    |
 | :----: | :-----: |
 | ft  | 右侧图标位  |
+
+## Methods
+
+- focus() **(v1.4.4以上可用)**
+
+> 用于指定 input 组件获取输入焦点
+
+```js
+this.$refs.theInput.focus()  // 其中 theInput 为对应 input 组件的 ref 值
+```
