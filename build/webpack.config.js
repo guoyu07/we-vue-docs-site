@@ -2,10 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/index.js'],
+  entry: {
+    vendor: ['jquery', 'jparticles'],
+    index: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/index.js'],
+    docs: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/docs.js']
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js',
     publicPath: '/asstes',
     libraryTarget: 'umd'
   },
@@ -45,6 +49,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['vendor'],
+      filename: '[name].js',
+      minChunks: 1
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({

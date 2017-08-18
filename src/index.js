@@ -1,10 +1,5 @@
 import 'babel-polyfill'
-// import Vue from 'vue'
 
-// import App from './app.vue'
+import jQuery from 'jquery'
 
-// new Vue({
-//   el: '#app',
-//   render: h => h(App)
-// })
-
+window.$ = jQuery
