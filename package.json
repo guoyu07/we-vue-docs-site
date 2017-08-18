@@ -29,6 +29,7 @@
     "html-loader": "^0.4.5",
     "jparticles": "^2.0.1",
     "jquery": "^3.2.1",
+    "markdown-it": "^8.3.2",
     "node-sass": "^4.5.3",
     "opn": "^5.1.0",
     "postcss": "^6.0.8",

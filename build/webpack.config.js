@@ -3,9 +3,8 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    vendor: ['jquery', 'jparticles'],
-    index: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/index.js'],
-    docs: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/docs.js']
+    vendor: ['vue', 'vue-router', 'jquery', 'jparticles'],
+    main: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/main.js'],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -13,6 +12,12 @@ module.exports = {
     publicPath: '/asstes',
     libraryTarget: 'umd'
   },
+  // resolve: {
+  //   extensions: ['.js', '.vue'],
+  //   alias: {
+  //     'vue$': 'vue/dist/vue.js'
+  //   }
+  // },
   module: {
     rules: [
       {
@@ -28,6 +33,10 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.html$/,
@@ -56,12 +65,12 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      comporess: {
-        warnings: false
-      },
-      sourceMap: true
-    })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   comporess: {
+    //     warnings: false
+    //   },
+    //   sourceMap: true
+    // })
   ],
   target: 'web'
 }

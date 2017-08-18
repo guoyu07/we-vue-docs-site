@@ -1,40 +1,29 @@
 <template>
-  <div>
-    <doc-header></doc-header>
-    <div id="banner">
-      <div class="welcome">welcome</div>
-    </div>
-    <div id="footer">
-
-    </div>
+  <div id="header">
+    <div class="logo"></div>
+    <ul class="nav">
+      <li>
+        <a href="">首页</a>
+      </li>
+      <li>
+        <a href="">文档</a>
+      </li>
+      <li>
+        <a href="">变更记录</a>
+      </li>
+      <li>
+        <a href="https://github.com/tianyong90/we-vue" target="new">GitHub</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-  import JParticles from 'jparticles'
-
   export default {
     data () {
       return {}
     }
   }
-
-
-  new JParticles.particle('#banner', {
-    num: 0.2,
-    maxR: 1.5,
-    minR: 0.2,
-    maxSpeed: 1,
-    minSpeed: 0.2,
-    // color: '#25bfff',
-    lineWidth: 0.1,
-    lineShape: 'spider',
-    range: 1000,
-    proximity: 100,
-    // 开启视差效果
-    parallax: true,
-    parallaxStrength: 5
-  })
 </script>
 
 <style scoped lang="scss">
@@ -87,13 +76,5 @@ body {
       }
     }
   }
-}
-
-#banner {
-  display: block;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  background-color: #ccc;
 }
 </style>
