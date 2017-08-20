@@ -1,10 +1,16 @@
-{
+module.exports = {
+    "root": true,
     "env": {
-        "browser": true,
-        "node": true
+        "browser": true
     },
     "parser": "babel-eslint",
-    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "extends": "standard",
+    "plugins": [
+        "html"
+    ],
     "rules": {
         "indent": [
             "error",
@@ -14,10 +20,6 @@
             "error",
             "single"
         ],
-        "semi": [
-            "error",
-            "never"
-        ],
         "no-unused-vars": [
             "warn"
         ],
@@ -26,4 +28,4 @@
         ],
         "no-console": 0
     }
-}
+};

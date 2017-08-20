@@ -20,21 +20,21 @@
   }
 
 
-  new JParticles.particle('#banner', {
-    num: 0.2,
-    maxR: 1.5,
-    minR: 0.2,
-    maxSpeed: 1,
-    minSpeed: 0.2,
-    // color: '#25bfff',
-    lineWidth: 0.1,
-    lineShape: 'spider',
-    range: 1000,
-    proximity: 100,
-    // 开启视差效果
-    parallax: true,
-    parallaxStrength: 5
-  })
+  // new JParticles.particle('#banner', {
+  //   num: 0.2,
+  //   maxR: 1.5,
+  //   minR: 0.2,
+  //   maxSpeed: 1,
+  //   minSpeed: 0.2,
+  //   // color: '#25bfff',
+  //   lineWidth: 0.1,
+  //   lineShape: 'spider',
+  //   range: 1000,
+  //   proximity: 100,
+  //   // 开启视差效果
+  //   parallax: true,
+  //   parallaxStrength: 5
+  // })
 </script>
 
 <style scoped lang="scss">

@@ -1,5 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -9,26 +11,35 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].js',
-    publicPath: '/asstes',
+    publicPath: '/',
     libraryTarget: 'umd'
   },
-  // resolve: {
-  //   extensions: ['.js', '.vue'],
-  //   alias: {
-  //     'vue$': 'vue/dist/vue.js'
-  //   }
-  // },
+  resolve: {
+    extensions: ['.js', '.vue', 'json'],
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
   module: {
     rules: [
       {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
         enforce: 'pre',
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'eslint-loader'
+        include: [path.join(__dirname, '../src')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'//,
+        // options:
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        include: [path.join(__dirname, '../src')]
       },
       {
         test: /\.css$/,
@@ -41,11 +52,6 @@ module.exports = {
       {
         test: /\.html$/,
         loaders: ['html-loader']
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        exclude: /(node_modules|bower_components)/
       },
       {
         test: /\.(png|jpe?g|gif)$/,
@@ -71,6 +77,11 @@ module.exports = {
     //   },
     //   sourceMap: true
     // })
-  ],
-  target: 'web'
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html',
+      inject: true
+    }),
+    new FriendlyErrorsPlugin()
+  ]
 }
