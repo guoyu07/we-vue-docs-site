@@ -1,15 +1,17 @@
 import 'babel-polyfill'
 import Vue from 'vue'
-// import VueRouter from 'vue-router'
-// import jQuery from 'jquery'
+import router from './router'
+import './assets/common.scss'
+import DocHeader from './components/header'
+import App from './app'
 
-import './assets/css/common.scss'
+Vue.config.productionTip = false
 
-import App from './app.vue'
+Vue.component('doc-header', DocHeader)
 
-Vue.component('doc-header', require('./header.vue'))
-
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router
 })

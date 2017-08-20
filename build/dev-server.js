@@ -1,9 +1,13 @@
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = '"development"'
+}
+
 var webpack = require('webpack')
 var path = require('path')
 var devServer = require('webpack-dev-server')
 var opn = require('opn')
 
-var webpackConfig = require('./webpack.config.js')
+var webpackConfig = require('./webpack.dev.conf.js')
 
 var compiler = webpack(webpackConfig)
 

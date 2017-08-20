@@ -1,7 +1,4 @@
 var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -17,7 +14,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', 'json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.join(__dirname, '../src')
     }
   },
   module: {
@@ -33,8 +31,18 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader'//,
-        // options:
+        loader: 'vue-loader',
+        options: {
+          // lourders: {
+          //
+          // },
+          transformToRequire: {
+            video: 'src',
+            souce: 'src',
+            img: 'src',
+            image: 'xlink:href'
+          }
+        }
       },
       {
         test: /\.js$/,
@@ -62,26 +70,5 @@ module.exports = {
         loader: 'file-loader'
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor'],
-      filename: '[name].js',
-      minChunks: 1
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   comporess: {
-    //     warnings: false
-    //   },
-    //   sourceMap: true
-    // })
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html',
-      inject: true
-    }),
-    new FriendlyErrorsPlugin()
-  ]
+  }
 }
