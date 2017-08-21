@@ -4,6 +4,7 @@ import router from './router'
 import './assets/common.scss'
 import DocHeader from './components/header'
 import App from './app'
+// import 'highlight.js/styles/github.css'
 
 Vue.config.productionTip = false
 

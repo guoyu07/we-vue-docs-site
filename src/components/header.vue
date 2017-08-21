@@ -1,7 +1,9 @@
 <template>
   <div id="header">
     <div class="main">
-      <div class="logo"></div>
+      <router-link to="/" class="logo">
+        <img src="" alt="">
+      </router-link>
       <ul class="nav">
         <li>
           <router-link to="/">首页</router-link>
@@ -43,6 +45,7 @@
     height: $header-height;
     overflow: hidden;
     background-color: rgba(27, 36, 61, 0.58);
+    z-index: 100;
 
     .main {
       display: block;
@@ -56,7 +59,6 @@
       float: left;
       width: 60px;
       height: 60px;
-      background-color: #0f0;
       margin: 5px 0;
     }
 

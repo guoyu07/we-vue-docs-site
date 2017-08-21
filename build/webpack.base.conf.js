@@ -32,17 +32,17 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          // lourders: {
-          //
-          // },
-          transformToRequire: {
-            video: 'src',
-            souce: 'src',
-            img: 'src',
-            image: 'xlink:href'
-          }
-        }
+        // options: {
+        //   // lourders: {
+        //   //
+        //   // },
+        //   transformToRequire: {
+        //     video: 'src',
+        //     souce: 'src',
+        //     img: 'src',
+        //     image: 'xlink:href'
+        //   }
+        // }
       },
       {
         test: /\.js$/,

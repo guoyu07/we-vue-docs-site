@@ -3,3 +3,66 @@ body {
   margin: 0;
   padding: 0;
 }
+
+pre {
+  display: block;
+  padding: 1em;
+  overflow-y: hidden;
+  font-size: 1.2em;
+  font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace;
+  color: #4d4d4c;
+  background: #eee;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+
+  thead {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+
+    tr {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      font-weight: inherit;
+      font-style: inherit;
+      font-family: inherit;
+      font-size: 100%;
+      display: table-row;
+      vertical-align: inherit;
+      border-color: inherit;
+    }
+
+    th {
+      text-align: center;
+      padding: 5px 15px;
+      font-weight: bold;
+      background-color: #d3d3d3;
+      vertical-align: middle;
+    }
+  }
+}
+
+tr:nth-child(2n) {
+  background-color: #eee;
+}

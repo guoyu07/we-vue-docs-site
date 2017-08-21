@@ -4,7 +4,10 @@
 </template>
 
 <script>
+  import axios from 'axios'
   import MarkdownIt from 'markdown-it'
+  import Highlightjs from 'highlight.js'
+  import 'highlight.js/styles/github.css'
 
   export default {
     data () {
@@ -15,9 +18,26 @@
 
     mounted () {
       /* eslint-disable no-new */
-      let md = new MarkdownIt()
+      let md = new MarkdownIt({
+        highlight: function (str, lang) {
+          if (lang && Highlightjs.getLanguage(lang)) {
+            try {
+              return Highlightjs.highlight(lang, str).value
+            } catch (__) {}
+          }
 
-      this.content = md.render('`what the fuck`')
+          return ''
+        }
+      })
+
+      axios.get('../assets/action_sheet.md').then(response => {
+        this.content = response.data
+
+        this.content = md.render(response.data)
+      }).catch(error => {
+        console.log(error)
+        console.log('fuck')
+      })
     }
   }
 </script>
@@ -28,7 +48,6 @@
     width: 1000px;
     overflow: hidden;
     margin: 80px auto 0;
-    background-color: #ccc;
     padding: 2rem;
     border-radius: .5em;
   }

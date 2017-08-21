@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class="main">
     <div id="banner">
-      <div class="title">WE-VUE</div>
     </div>
+    <div class="title">WE-VUE</div>
+    <div class="slogan">we-vue 一套简单易用的 vue 组件。</div>
+    <div class="btn-quickstart">开始使用</div>
   </div>
 </template>
 
@@ -37,18 +39,37 @@
 
 <style scoped lang="scss">
   #banner {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: rgba(47, 135, 137, 0.32);
+    position: absolute;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 
     .title {
       color: #000;
-      font-size: 3rem;
+      font-size: 3em;
+    }
+
+    .slogan {
+      color: #00f;
+      font-size: 3em;
+    }
+
+    .btn-quickstart {
+      display: block;
+      padding: .5em 1em;
+      background-color: purple;
+      color: #fff;
     }
   }
 </style>
