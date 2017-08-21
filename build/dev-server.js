@@ -4,10 +4,9 @@ if (!process.env.NODE_ENV) {
 
 var webpack = require('webpack')
 var path = require('path')
+var webpackConfig = require('./webpack.dev.conf.js')
 var devServer = require('webpack-dev-server')
 var opn = require('opn')
-
-var webpackConfig = require('./webpack.dev.conf.js')
 
 var compiler = webpack(webpackConfig)
 

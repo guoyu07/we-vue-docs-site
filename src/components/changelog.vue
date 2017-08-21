@@ -1,16 +1,23 @@
 <template>
-  <div class="main">
-    changelog
+  <div class="main" v-html="content">
   </div>
 </template>
 
 <script>
+  import MarkdownIt from 'markdown-it'
+
   export default {
     data () {
-      return {}
+      return {
+        content: ''
+      }
     },
 
     mounted () {
+      /* eslint-disable no-new */
+      let md = new MarkdownIt()
+
+      this.content = md.render('`what the fuck`')
     }
   }
 </script>
@@ -18,7 +25,6 @@
 <style scoped lang="scss">
   .main {
     display: block;
-    width: 100%;
     width: 1000px;
     overflow: hidden;
     margin: 80px auto 0;

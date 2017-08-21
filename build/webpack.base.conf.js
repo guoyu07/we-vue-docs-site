@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: {
     vendor: ['vue', 'vue-router', 'jquery', 'jparticles'],
-    main: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server', './src/main.js'],
+    main: './src/main.js',
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
