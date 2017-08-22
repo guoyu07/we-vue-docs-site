@@ -39,10 +39,13 @@
 
 <style scoped lang="scss">
   #banner {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: rgba(47, 135, 137, 0.32);
+    background: url(../assets/background.jpg) center top no-repeat;
+    background-size: cover;
     position: absolute;
+    z-index: 10;
+    filter: blur(4px) brightness(100%);
   }
 
   .main {
@@ -52,17 +55,22 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(100vh - 70px);
 
     .title {
-      color: #000;
-      font-size: 3em;
+      color: #fff;
+      font-size: 5em;
+      z-index: 100;
+      text-shadow: #333 3px 3px 6px;
     }
 
     .slogan {
-      color: #00f;
-      font-size: 3em;
+      color: #fff;
+      font-size: 1.2em;
+      z-index: 1000;
+      text-shadow: #333 2px 2px 0px;
+      margin-top: 20px;
     }
 
     .btn-quickstart {
@@ -71,6 +79,8 @@
       background-color: purple;
       color: #fff;
       z-index: 100;
+      margin-top: 30px;
+      text-decoration: none;
     }
   }
 </style>
