@@ -4,7 +4,7 @@
     </div>
     <div class="title">WE-VUE</div>
     <div class="slogan">we-vue 一套简单易用的 vue 组件。</div>
-    <div class="btn-quickstart">开始使用</div>
+    <router-link to="/doc" class="btn-quickstart">开始使用</router-link>
   </div>
 </template>
 
@@ -70,6 +70,7 @@
       padding: .5em 1em;
       background-color: purple;
       color: #fff;
+      z-index: 100;
     }
   }
 </style>

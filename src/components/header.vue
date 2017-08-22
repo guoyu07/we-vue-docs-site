@@ -1,8 +1,8 @@
 <template>
   <div id="header">
     <div class="main">
-      <router-link to="/" class="logo">
-        <img src="" alt="">
+      <router-link to="/">
+        <img class="logo" src="../assets/logo.png" alt="">
       </router-link>
       <ul class="nav">
         <li>
@@ -30,6 +30,7 @@
 
 <style scoped lang="scss">
   $header-height: 70px;
+  $header-background: #fff;
 
   body {
     position: relative;
@@ -44,7 +45,7 @@
     width: 100%;
     height: $header-height;
     overflow: hidden;
-    background-color: rgba(27, 36, 61, 0.58);
+    background-color: $header-background;
     z-index: 100;
 
     .main {
@@ -72,14 +73,14 @@
         display: inline-block;
 
         a {
-          color: #fff;
+          color: #333;
           text-decoration: none;
           display: inline-block;
           padding: 0 1em;
           line-height: $header-height;
 
           &:hover {
-            color: #B8EC2F;
+            color: #111;
           }
         }
       }
