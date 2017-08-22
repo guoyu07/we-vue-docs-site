@@ -3,40 +3,10 @@
     <div class="doc-wrap">
       <div class="doc-nav">
         <ul>
-          <li class="doc-nav__item">
-            <h2 class="title">开始使用</h2>
+          <li class="doc-nav__item" v-for="navItem in nav">
+            <h2 class="title" v-html="navItem.name"></h2>
             <ul class="sub-tree">
-              <li><router-link to="">概述</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-            </ul>
-          </li>
-          <li class="doc-nav__item">
-            <h2 class="title">WE-VUE 组件</h2>
-            <h3 class="sub-title">基础组件</h3>
-            <ul class="sub-tree">
-              <li><router-link to="">概述</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-            </ul>
-            <h3 class="sub-title">基础组件</h3>
-            <ul class="sub-tree">
-              <li><router-link to="">概述</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
-              <li><router-link to="">快速上手</router-link></li>
+              <li><router-link to="" v-for="subItem in navItem.subNav" v-text="subItem.name"></router-link></li>
             </ul>
           </li>
         </ul>
@@ -44,7 +14,7 @@
       <div class="doc-content" v-html="content">
       </div>
     </div>
-    <div class="demo-wrap">
+    <div class="demo-wrap" :style="{ top: demoWrapTop + 'px' }">
       <div class="mobile-top"></div>
       <iframe id="iframe-demo" src="http://demo.wevue.org" frameborder="0"></iframe>
     </div>
@@ -56,11 +26,14 @@
   import MarkdownIt from 'markdown-it'
   import Highlightjs from 'highlight.js'
   import 'highlight.js/styles/github.css'
+  import { nav } from '../config'
 
   export default {
     data () {
       return {
-        content: ''
+        nav,
+        content: '',
+        demoWrapTop: 90
       }
     },
 
@@ -89,6 +62,15 @@
       let demoIframe = document.getElementById('iframe-demo')
 
       demoIframe.src = 'http://demo.wevue.org/indicator'
+
+      // 右侧 DEMO 区实在 sticky 效果
+      document.addEventListener('scroll', (e) => {
+        if (document.body.scrollTop >= 70) {
+          this.demoWrapTop = document.body.scrollTop + 20
+        } else {
+          this.demoWrapTop = 90
+        }
+      })
     }
   }
 </script>
@@ -96,8 +78,8 @@
 <style scoped lang="scss">
   .doc-wrap {
     display: flex;
-    margin: 90px 100px 50px 30px;
-    width: calc(100vw - 490px);
+    margin: 20px 100px 50px 30px;
+    width: calc(100vw - 480px);
     background-color: #fff;
     border-radius: 5px;
 
@@ -172,27 +154,26 @@
     overflow: hidden;
     width: 375px;
     min-width: 375px;
-    height: 640px;
     z-index: 100;
     border-radius: 6px;
     background: #f2f2f2;
     box-sizing: border-box;
     right: 30px;
-    top: 90px;
-    position: fixed;
+    position: absolute;
+    box-shadow: #999 5px 5px 10px;
 
     .mobile-top {
       display: block;
       overflow: hidden;
       width: 100%;
-      height: 65px;
+      height: 42px;
       background: url(../assets/mobile_top.jpg) left top no-repeat;
       background-size: contain;
     }
 
     iframe {
       width: 100%;
-      height: 575px;
+      height: 555px;
     }
   }
 </style>

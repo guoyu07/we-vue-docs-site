@@ -47,7 +47,7 @@
     display: block;
     width: 1000px;
     overflow: hidden;
-    margin: 90px auto 30px;
+    margin: 20px auto 30px;
     padding: 1.8rem;
     border-radius: .5em;
     background-color: #fff;
