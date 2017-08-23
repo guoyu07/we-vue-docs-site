@@ -1,3 +1,5 @@
+@import "~normalize.css";
+
 @font-face {
   font-family: 'Source Code Pro';
   font-style: normal;
@@ -79,4 +81,23 @@ table {
 
 tr:nth-child(2n) {
   background-color: #eee;
+}
+
+.doc-content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #444;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  ul {
+    li {
+      line-height: 1.5;
+    }
+  }
 }

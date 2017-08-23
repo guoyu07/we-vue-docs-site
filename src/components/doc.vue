@@ -6,7 +6,9 @@
           <li class="doc-nav__item" v-for="navItem in navs">
             <h2 class="title" v-html="navItem.name"></h2>
             <ul class="sub-tree">
-              <li><router-link :to="" v-for="subItem in navItem.subNav" v-text="subItem.name"></router-link></li>
+              <li>
+                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" v-text="subItem.name" :class="{ current: subItem.link.indexOf(id) !== -1 }"></router-link>
+              </li>
             </ul>
           </li>
         </ul>
@@ -22,10 +24,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  import MarkdownIt from 'markdown-it'
-  import Highlightjs from 'highlight.js'
-  import 'highlight.js/styles/github.css'
+  import { getRenderedMd } from '../utils'
   import { navs } from '../config'
 
   export default {
@@ -33,35 +32,17 @@
       return {
         navs,
         content: '',
-        demoWrapTop: 90
+        demoWrapTop: 90,
+        id: null
       }
     },
 
     mounted () {
-      /* eslint-disable no-new */
-      let md = new MarkdownIt({
-        highlight: function (str, lang) {
-          if (lang && Highlightjs.getLanguage(lang)) {
-            try {
-              return Highlightjs.highlight(lang, str).value
-            } catch (__) {}
-          }
-          return ''
-        }
+      this.id = this.$route.params.id || 'index'
+
+      getRenderedMd(this.id).then((data) => {
+        this.content = data
       })
-
-      axios.get('../assets/action_sheet.md').then(response => {
-        this.content = response.data
-
-        this.content = md.render(response.data)
-      }).catch(error => {
-        console.log(error)
-        console.log('fuck')
-      })
-
-      let demoIframe = document.getElementById('iframe-demo')
-
-      demoIframe.src = 'http://demo.wevue.org/indicator'
 
       // 右侧 DEMO 区实在 sticky 效果
       document.addEventListener('scroll', (e) => {
@@ -71,6 +52,25 @@
           this.demoWrapTop = 90
         }
       })
+    },
+
+    methods: {
+      setIframeSrc (src) {
+        let demoIframe = document.getElementById('iframe-demo')
+        demoIframe.src = src
+      }
+    },
+
+    watch: {
+      '$route.params.id': function (val) {
+        this.id = val || 'index'
+
+        getRenderedMd(this.id).then((data) => {
+          this.content = data
+        })
+
+        this.setIframeSrc('http://demo.wevue.org/' + this.id)
+      }
     }
   }
 </script>
@@ -135,8 +135,12 @@
           padding: .5em;
 
           &:hover {
-            color: #67baff;
+            color: #2196f3;
             background-color: #efefef;
+          }
+
+          &.current {
+            background-color: #ededed;
           }
         }
       }

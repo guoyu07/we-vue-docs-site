@@ -7,6 +7,8 @@ import Changelog from '@/components/changelog'
 Vue.use(Router)
 
 export default new Router({
+  // mode: 'history',
+  // base: '/',
   routes: [
     {
       path: '/',
@@ -14,7 +16,7 @@ export default new Router({
       component: Index
     },
     {
-      path: '/doc',
+      path: '/doc/:id?',
       name: 'index',
       component: Doc
     },

@@ -1,13 +1,10 @@
 <template>
-  <div class="main" v-html="content">
+  <div class="doc-content" v-html="content">
   </div>
 </template>
 
 <script>
-  import axios from 'axios'
-  import MarkdownIt from 'markdown-it'
-  import Highlightjs from 'highlight.js'
-  import 'highlight.js/styles/github.css'
+  import { getRenderedMd } from '../utils'
 
   export default {
     data () {
@@ -17,33 +14,15 @@
     },
 
     mounted () {
-      /* eslint-disable no-new */
-      let md = new MarkdownIt({
-        highlight: function (str, lang) {
-          if (lang && Highlightjs.getLanguage(lang)) {
-            try {
-              return Highlightjs.highlight(lang, str).value
-            } catch (__) {}
-          }
-
-          return ''
-        }
-      })
-
-      axios.get('../assets/changelog.md').then(response => {
-        this.content = response.data
-
-        this.content = md.render(response.data)
-      }).catch(error => {
-        console.log(error)
-        console.log('fuck')
+      getRenderedMd('changelog').then((data) => {
+        this.content = data
       })
     }
   }
 </script>
 
 <style scoped lang="scss">
-  .main {
+  .doc-content {
     display: block;
     width: 1000px;
     overflow: hidden;
