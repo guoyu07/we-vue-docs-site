@@ -3,7 +3,7 @@
     <div id="banner">
     </div>
     <div class="title">WE-VUE</div>
-    <div class="slogan">we-vue 一套简单易用的 vue 组件。</div>
+    <div class="slogan">一套简单易用的 vue 组件。</div>
     <router-link to="/doc" class="btn-quickstart">开始使用</router-link>
   </div>
 </template>

@@ -30,7 +30,7 @@
         }
       })
 
-      axios.get('../assets/action_sheet.md').then(response => {
+      axios.get('../assets/changelog.md').then(response => {
         this.content = response.data
 
         this.content = md.render(response.data)

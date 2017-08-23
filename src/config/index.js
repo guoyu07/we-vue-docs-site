@@ -1,5 +1,5 @@
-import nav from './nav'
+import navs from './navs'
 
 export {
-  nav
+  navs
 }

@@ -1,4 +1,4 @@
-let nav = [
+let navs = [
   {
     name: '开始使用',
     subNav: [
@@ -40,4 +40,4 @@ let nav = [
   }
 ]
 
-export default nav
+export default navs

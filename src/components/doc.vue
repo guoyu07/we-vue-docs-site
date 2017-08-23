@@ -3,10 +3,10 @@
     <div class="doc-wrap">
       <div class="doc-nav">
         <ul>
-          <li class="doc-nav__item" v-for="navItem in nav">
+          <li class="doc-nav__item" v-for="navItem in navs">
             <h2 class="title" v-html="navItem.name"></h2>
             <ul class="sub-tree">
-              <li><router-link to="" v-for="subItem in navItem.subNav" v-text="subItem.name"></router-link></li>
+              <li><router-link :to="" v-for="subItem in navItem.subNav" v-text="subItem.name"></router-link></li>
             </ul>
           </li>
         </ul>
@@ -26,12 +26,12 @@
   import MarkdownIt from 'markdown-it'
   import Highlightjs from 'highlight.js'
   import 'highlight.js/styles/github.css'
-  import { nav } from '../config'
+  import { navs } from '../config'
 
   export default {
     data () {
       return {
-        nav,
+        navs,
         content: '',
         demoWrapTop: 90
       }
