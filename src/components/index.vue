@@ -5,6 +5,7 @@
     <div class="title">WE-VUE</div>
     <div class="slogan">一套简单易用的 vue 组件。</div>
     <router-link to="/doc" class="btn-quickstart">开始使用</router-link>
+    <img class="qrcode" src="../assets/demo_qrcode.png" alt="">
   </div>
 </template>
 
@@ -45,7 +46,6 @@
     background-size: cover;
     position: absolute;
     z-index: 10;
-    filter: blur(4px) brightness(100%);
   }
 
   .main {
@@ -79,8 +79,18 @@
       background-color: purple;
       color: #fff;
       z-index: 100;
-      margin-top: 30px;
+      margin-top: 50px;
       text-decoration: none;
+    }
+
+    .qrcode {
+      display: block;
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      z-index: 100;
+      bottom: 60px;
+      position: absolute;
     }
   }
 </style>

@@ -17,8 +17,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: '#source-map',
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    filename: 'static/js/[name].[chunkhash].js',
+    chunkFilename: 'static/js/[id].[chunkhash].js'
   },
   plugins: [
     new webpack.DefinePlugin({

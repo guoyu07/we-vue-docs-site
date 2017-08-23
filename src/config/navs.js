@@ -52,7 +52,7 @@ let navs = [
         link: '/doc/button'
       },
       {
-        name: 'Checklist',
+        name: 'CheckList',
         link: '/doc/check_list'
       },
       {
@@ -65,7 +65,7 @@ let navs = [
       },
       {
         name: 'Switch',
-        link: '/doc/'
+        link: '/doc/switch'
       },
       {
         name: 'Textarea',

@@ -17,7 +17,7 @@ export default new Router({
     },
     {
       path: '/doc/:id?',
-      name: 'index',
+      name: 'doc',
       component: Doc
     },
     {

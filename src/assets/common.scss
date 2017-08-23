@@ -71,11 +71,15 @@ table {
 
     th {
       text-align: center;
-      padding: 5px 15px;
+      padding: .5em 0;
       font-weight: bold;
       background-color: #d3d3d3;
       vertical-align: middle;
     }
+  }
+
+  td {
+    padding: .5em 0;
   }
 }
 

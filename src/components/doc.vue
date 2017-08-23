@@ -3,11 +3,11 @@
     <div class="doc-wrap">
       <div class="doc-nav">
         <ul>
-          <li class="doc-nav__item" v-for="navItem in navs">
+          <li class="doc-nav__item" v-for="navItem in navs" :key="navItem.name">
             <h2 class="title" v-html="navItem.name"></h2>
             <ul class="sub-tree">
               <li>
-                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" v-text="subItem.name" :class="{ current: subItem.link.indexOf(id) !== -1 }"></router-link>
+                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" :key="subItem.name" v-text="subItem.name" :class="{ current: subItem.link.indexOf(id) !== -1 }"></router-link>
               </li>
             </ul>
           </li>
@@ -24,8 +24,9 @@
 </template>
 
 <script>
-  import { getRenderedMd } from '../utils'
-  import { navs } from '../config'
+  import { navs, Docs, demoUrlMap } from '../config'
+  import changeCase from 'change-case'
+  import 'highlight.js/styles/github.css'
 
   export default {
     data () {
@@ -40,9 +41,9 @@
     mounted () {
       this.id = this.$route.params.id || 'index'
 
-      getRenderedMd(this.id).then((data) => {
-        this.content = data
-      })
+      this.content = Docs[changeCase.pascalCase(this.id)]
+
+      this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(this.id))
 
       // 右侧 DEMO 区实在 sticky 效果
       document.addEventListener('scroll', (e) => {
@@ -65,11 +66,9 @@
       '$route.params.id': function (val) {
         this.id = val || 'index'
 
-        getRenderedMd(this.id).then((data) => {
-          this.content = data
-        })
+        this.content = Docs[changeCase.pascalCase(this.id)]
 
-        this.setIframeSrc('http://demo.wevue.org/' + this.id)
+        this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(this.id))
       }
     }
   }
@@ -148,6 +147,7 @@
 
     .doc-content {
       display: block;
+      width: 100%;
       overflow: hidden;
       padding: 1.8em;
     }

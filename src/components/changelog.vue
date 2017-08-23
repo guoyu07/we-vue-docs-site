@@ -4,19 +4,17 @@
 </template>
 
 <script>
-  import { getRenderedMd } from '../utils'
+  import abc from '../assets/docs/changelog.md'
+  import 'highlight.js/styles/github.css'
 
   export default {
     data () {
       return {
-        content: ''
+        content: abc
       }
     },
 
     mounted () {
-      getRenderedMd('changelog').then((data) => {
-        this.content = data
-      })
     }
   }
 </script>
