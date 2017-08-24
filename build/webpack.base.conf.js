@@ -2,11 +2,12 @@ var path = require('path')
 var marked = require('marked')
 var highlightjs = require('highlight.js')
 
+// md 代码高亮
 marked.setOptions({
   highlight: function (code) {
-    return highlightjs.highlightAuto(code).value;
+    return highlightjs.highlightAuto(code).value
   }
-});
+})
 
 var renderer = new marked.Renderer()
 
@@ -66,13 +67,6 @@ module.exports = {
       {
         test: /\.md$/,
         use: [
-          // {
-          //   loader: 'file-loader',
-          //   options: {
-          //     limit: 10000,
-          //     name: path.posix.join('static', 'docs/[name].[hash:7].[ext]')
-          //   }
-          // },
           {
             loader: 'html-loader',
           },

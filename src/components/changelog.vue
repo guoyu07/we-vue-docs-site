@@ -12,9 +12,6 @@
       return {
         content: abc
       }
-    },
-
-    mounted () {
     }
   }
 </script>

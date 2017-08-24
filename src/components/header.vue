@@ -65,8 +65,8 @@
     .nav {
       display: block;
       padding: 0;
-      margin: 0;
-      float: right;
+      float: left;
+      margin: 0 0 0 100px;
 
       li {
         display: inline-block;
@@ -79,7 +79,7 @@
           line-height: $header-height;
 
           &:hover {
-            color: #111;
+            color: #41b883;
           }
         }
       }

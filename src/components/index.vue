@@ -20,7 +20,7 @@
     mounted () {
       /* eslint-disable no-new, new-cap */
       new JParticles.particle('#banner', {
-        num: 0.2,
+        num: 0.1,
         maxR: 1.5,
         minR: 0.2,
         maxSpeed: 1,
@@ -42,6 +42,7 @@
   #banner {
     width: 100%;
     height: 100vh;
+    /*background-color: #003;*/
     background: url(../assets/background.jpg) center top no-repeat;
     background-size: cover;
     position: absolute;
@@ -76,21 +77,22 @@
     .btn-quickstart {
       display: block;
       padding: .5em 1em;
-      background-color: purple;
-      color: #fff;
+      background-color: #329368;
+      color: white;
       z-index: 100;
       margin-top: 50px;
       text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
     }
 
     .qrcode {
       display: block;
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       background-color: #fff;
       z-index: 100;
-      bottom: 60px;
-      position: absolute;
+      margin-top: 30px;
     }
   }
 </style>
