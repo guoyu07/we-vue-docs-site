@@ -1,6 +1,4 @@
 问题解答
 ---
 
-这里将汇总 we-vue 使用过程中的一些觉问题及相应的解决办法……
-
-
+1. 对于地按需引入，推荐使用 `babel-component-plugin` 或 `babel-plugin-import` 插件。
