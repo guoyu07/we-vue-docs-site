@@ -8,12 +8,24 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 var webpackConfig = merge(baseWebpackConfig, {
-  // module: {
-  //   rules: utils.styleLoaders({
-  //     sourceMap: config.build.productionSourceMap,
-  //     extract: true
-  //   })
-  // },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
+      }
+    ]
+  },
   devtool: '#source-map',
   output: {
     path: path.join(__dirname, '../dist'),
@@ -32,7 +44,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: path.join(__dirname, '../dist/css/[name].[contenthash].css')
+      filename:  'static/css/[name].[contenthash].css'
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.

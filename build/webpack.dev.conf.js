@@ -10,6 +10,18 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 })
 
 module.exports = merge(baseWebpackConfig, {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
   devtool: '#cheap-module-eval-source-map',
   plugins: [
     new webpack.DefinePlugin({
