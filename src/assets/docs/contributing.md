@@ -2,14 +2,14 @@
 ---
 ## 开发
 
-我们非常欢迎您加入 Hexo 的开发，这份文件将帮助您了解开发流程。
+我们非常欢迎您加入 WE-VUE 的开发，这份文件将帮助您了解开发流程。
 
 ### 开始之前
 
 请遵守以下准则：
 
 - 代码需要通过 Eslint 规范检查。
-- 使用 2 个空格缩排。
+- 使用 2 个空格缩进，不要使用 Tab 制表符缩进。
 - 不要把逗号放在最前面。
 
 ### 工作流程
@@ -68,16 +68,9 @@
 4. 推送（push）分支。
 5. 建立一个新的合并申请（pull request）并描述变动。
 
-### 翻译
-
-1. 在 `source` 资料夹中建立一个新的语言资料夹（全小写）。
-2. 把 `source` 资料夹中相关的文件（Markdown 和模板文件）复制到新的语言资料夹中。
-3. 在 `source/_data/language.yml` 中新增语言。
-4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
-
 ## 反馈问题
 
-当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/tianyong90/we-vue/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。如果你没有找答案，请在 Github 报告它。
+当您在使用 WE-VUE 遇到问题时，您可以尝试在 [问题解答](http://wevue.org/doc/troubleshooting) 中寻找解答，或是在 [GitHub](https://github.com/tianyong90/we-vue/issues) 上进行反馈。
 
 1. 描述具体问题及重现步骤。
 3. 附上相关代码及调试信息。

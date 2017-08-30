@@ -20,15 +20,13 @@ pre {
   padding: 1em;
   overflow-y: hidden;
   font-size: 1.2em;
-  font-family: "Source Code Pro", sans-serif !important;
   color: #4d4d4c;
   background: #f1f1f1;
   border-radius: 5px;
 }
 
 code {
-  font-family: "Source Code Pro", sans-serif !important;
-  word-wrap: break-word !important;
+  font-family: Monaco, "Source Code Pro", Menlo, Consolas, monospace !important;
 }
 
 table {
@@ -79,7 +77,7 @@ table {
   }
 
   td {
-    padding: .5em 0;
+    padding: .5em;
   }
 }
 
@@ -96,12 +94,18 @@ tr:nth-child(2n) {
   }
 
   p {
-    line-height: 1.5;
+    line-height: 1.65;
   }
 
   ul {
     li {
-      line-height: 1.5;
+      line-height: 1.65;
+    }
+  }
+
+  ol {
+    li {
+      line-height: 1.65;
     }
   }
 }
