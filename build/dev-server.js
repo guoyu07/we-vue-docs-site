@@ -12,7 +12,7 @@ var compiler = webpack(webpackConfig)
 
 var server = new devServer(compiler, {
   hot: true,
-  historyApiFallback: false,
+  historyApiFallback: true,
   contentBase: path.resolve(__dirname, '../src'),
   quiet: false,
   noInfo: false,
