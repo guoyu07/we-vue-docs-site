@@ -7,7 +7,7 @@
     "production": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "tiamyong90",
+  "author": "tianyong90",
   "devDependencies": {
     "axios": "^0.16.2",
     "babel-core": "^6.25.0",
@@ -21,7 +21,7 @@
     "change-case": "^3.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.4",
+    "css-loader": "^0.28.7",
     "eslint": "^4.5.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -47,7 +47,7 @@
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^3.1.1",
     "ora": "^1.3.0",
-    "postcss": "^6.0.8",
+    "postcss": "^6.0.10",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
