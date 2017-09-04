@@ -81,6 +81,14 @@ Vue.component(Picker.name, Picker)
 
 **省市区三级联运示例代码较多，不便于在文档中显示和查看，建议查看[相应示例的源码](https://github.com/tianyong90/we-vue/blob/master/example/pages/picker.vue)**
 
+picker 注册下列方法，最觉的使用场景就是在 change 事件中使用它们，以便获取或更改当前 picker 的值（包括获取/设置 slot 的值）
+
+- getSlotValue(index)：获取给定 slot 目前被选中的值
+- setSlotValue(index, value)：设定给定 slot 被选中的值，该值必须存在于该 slot 的备选值数组中
+- getSlotValues(index)：获取给定 slot 的备选值数组
+- setSlotValues(index, values)：设定给定 slot 的备选值数组
+- getValues()：获取所有 slot 目前被选中的值（分隔符 slot 除外）
+- setValues(values)：设定所有 slot 被选中的值（分隔符 slot 除外），该值必须存在于对应 slot 的备选值数组中
 
 ## API
 
