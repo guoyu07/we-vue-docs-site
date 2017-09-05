@@ -104,6 +104,10 @@ let navs = [
         link: '/doc/picker'
       },
       {
+        name: 'DatetimePicker',
+        link: '/doc/datetime_picker'
+      },
+      {
         name: 'Header',
         link: '/doc/header'
       },

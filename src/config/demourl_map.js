@@ -23,6 +23,7 @@ let urlMap = new Map([
   ['toast', 'toast'],
   ['top_tips', 'top-tips'],
   ['picker', 'picker'],
+  ['datetime_picker', 'datetime-picker'],
   ['header', 'header'],
   ['navbar', 'navbar'],
   ['tabbar', 'tabbar'],

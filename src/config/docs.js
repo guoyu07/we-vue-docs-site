@@ -22,6 +22,7 @@ import InfiniteScroll from '../assets/docs/infinite_scroll.md'
 import Toast from '../assets/docs/toast.md'
 import TopTips from '../assets/docs/top_tips.md'
 import Picker from '../assets/docs/picker.md'
+import DatetimePicker from '../assets/docs/datetime_picker.md'
 import Header from '../assets/docs/header.md'
 import Navbar from '../assets/docs/navbar.md'
 import Tabbar from '../assets/docs/tabbar.md'
@@ -62,6 +63,7 @@ export {
   Toast,
   TopTips,
   Picker,
+  DatetimePicker,
   Header,
   Navbar,
   Tabbar,

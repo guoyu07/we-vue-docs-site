@@ -7,7 +7,7 @@
             <h2 class="title" v-html="navItem.name"></h2>
             <ul class="sub-tree">
               <li>
-                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" :key="subItem.name" v-text="subItem.name" :class="{ current: subItem.link.indexOf(id) !== -1 }"></router-link>
+                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" :key="subItem.name" v-text="subItem.name" :class="{ current: isCurrent(subItem.link) }"></router-link>
               </li>
             </ul>
           </li>
@@ -59,6 +59,12 @@
       setIframeSrc (src) {
         let demoIframe = document.getElementById('iframe-demo')
         demoIframe.src = src
+      },
+
+      isCurrent (link) {
+        let reg = new RegExp(`/${this.id}$`)
+
+        return reg.test(link)
       }
     },
 
