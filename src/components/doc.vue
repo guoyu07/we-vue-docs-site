@@ -3,17 +3,18 @@
     <div class="doc-wrap">
       <div class="doc-nav">
         <ul>
-          <li class="doc-nav__item" v-for="navItem in navs" :key="navItem.name">
-            <h2 class="title" v-html="navItem.name"></h2>
+          <li class="doc-nav__item" v-for="navItem in navs" :key="navItem.title">
+            <h2 class="title" v-html="navItem.title"></h2>
             <ul class="sub-tree">
               <li>
-                <router-link :to="subItem.link" v-for="subItem in navItem.subNav" :key="subItem.name" v-text="subItem.name" :class="{ current: isCurrent(subItem.link) }"></router-link>
+                <router-link :to="subItem.path" v-for="subItem in navItem.list" :key="subItem.title" v-text="subItem.title" active-class="current"></router-link>
               </li>
             </ul>
           </li>
         </ul>
       </div>
-      <div class="doc-content" v-html="content">
+      <div class="doc-content">
+        <router-view></router-view>
       </div>
     </div>
     <div class="demo-wrap" :style="{ top: demoWrapTop + 'px' }">
@@ -24,26 +25,19 @@
 </template>
 
 <script>
-  import { navs, Docs, demoUrlMap } from '../config'
-  import changeCase from 'change-case'
+  import { navs, demoUrlMap } from '../config'
   import 'highlight.js/styles/github.css'
 
   export default {
     data () {
       return {
         navs,
-        content: '',
-        demoWrapTop: 90,
-        id: null
+        demoWrapTop: 90
       }
     },
 
     mounted () {
-      this.id = this.$route.params.id || 'index'
-
-      this.content = Docs[changeCase.pascalCase(this.id)]
-
-      this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(this.id))
+      this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(this.$route.name))
 
       // 右侧 DEMO 区实在 sticky 效果
       document.addEventListener('scroll', (e) => {
@@ -59,22 +53,12 @@
       setIframeSrc (src) {
         let demoIframe = document.getElementById('iframe-demo')
         demoIframe.src = src
-      },
-
-      isCurrent (link) {
-        let reg = new RegExp(`/${this.id}$`)
-
-        return reg.test(link)
       }
     },
 
     watch: {
-      '$route.params.id': function (val) {
-        this.id = val || 'index'
-
-        this.content = Docs[changeCase.pascalCase(this.id)]
-
-        this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(this.id))
+      '$route.name': function (val) {
+        this.setIframeSrc('http://demo.wevue.org/' + demoUrlMap.get(val))
       }
     }
   }

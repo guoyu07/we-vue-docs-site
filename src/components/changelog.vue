@@ -4,7 +4,7 @@
 </template>
 
 <script>
-  import abc from '../assets/docs/changelog.md'
+  import abc from '../docs/changelog.md'
   import 'highlight.js/styles/github.css'
 
   export default {
