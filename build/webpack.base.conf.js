@@ -66,18 +66,12 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-          {
-            loader: 'markdown-loader',
-            options: {
-              pedantic: true,
-              renderer
-            }
-          }
-        ]
+        loader: 'vue-markdown-loader',
+        options: {
+          preset: 'default',
+          breaks: true,
+          preventExtract: true
+        }
       },
       {
         test: /\.html$/,

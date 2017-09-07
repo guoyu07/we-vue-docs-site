@@ -1,21 +1,9 @@
 {
   "presets": [
     [
-      "es2015",
-      {
-        "modules": false
-      }
+      "stage-2"
     ]
   ],
-  "plugins": [
-    [
-      "component",
-      [
-        {
-          "libraryName": "we-vue",
-          "style": true
-        }
-      ]
-    ]
-  ]
+  "plugins": ["transform-runtime"],
+  "comments": false
 }
