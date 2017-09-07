@@ -1,17 +1,15 @@
 <template>
-  <div class="doc-content" v-html="content">
+  <div class="doc-content">
+    <changelog-md></changelog-md>
   </div>
 </template>
 
 <script>
-  import abc from '../docs/changelog.md'
   import 'highlight.js/styles/github.css'
 
   export default {
-    data () {
-      return {
-        content: abc
-      }
+    components: {
+      'changelog-md': () => import('../docs/changelog.md')
     }
   }
 </script>

@@ -14,7 +14,9 @@
         </ul>
       </div>
       <div class="doc-content">
-        <router-view></router-view>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
     <div class="demo-wrap" :style="{ top: demoWrapTop + 'px' }">
