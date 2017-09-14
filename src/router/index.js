@@ -123,6 +123,14 @@ export default new Router({
           }
         },
         {
+          name: 'number_spinner',
+          path: 'number_spinner',
+          component: () => import('../docs/number_spinner.md'),
+          meta: {
+            title: 'NumberSpinner'
+          }
+        },
+        {
           name: 'radio',
           path: 'radio',
           component: () => import('../docs/radio.md'),

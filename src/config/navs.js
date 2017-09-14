@@ -86,6 +86,12 @@ let navs = [
         doc: '../docs/badge.md'
       },
       {
+        title: 'NumberSpinner',
+        name: 'number_spinner',
+        path: '/doc/number_spinner',
+        doc: '../docs/number_spinner.md'
+      },
+      {
         title: 'Radio',
         name: 'radio',
         path: '/doc/radio',

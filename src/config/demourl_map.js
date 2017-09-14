@@ -12,6 +12,7 @@ let urlMap = new Map([
   ['button', 'button'],
   ['check_list', 'checklist'],
   ['input', 'input'],
+  ['number_spinner', 'number-spinner'],
   ['radio', 'radio'],
   ['switch', 'switch'],
   ['textarea', 'textarea'],
