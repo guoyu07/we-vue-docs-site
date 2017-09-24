@@ -12,6 +12,8 @@ Vue.component(NavbarItem.name, NavbarItem)
 
 ## 例子
 
+### 基本示例
+
 ```html
 <template>
   <wv-navbar v-model="selected" @change="changed" fixed>
@@ -20,22 +22,54 @@ Vue.component(NavbarItem.name, NavbarItem)
     <wv-navbar-item id="item3">选项3</wv-navbar-item>
   </wv-navbar>
 </template>
+```
 
-<script>
-export default {
-  data () {
-    return {
-      selected: 'item1'
-    }
-  },
+### 自定义激活项颜色
 
-  methods: {
-    changed (e) {
-      console.log(e)
-    }
-  }
-}
-</script>
+```html
+<template>
+  <wv-navbar v-model="selected" @change="changed" active-color="red">
+    <wv-navbar-item id="item1">选项1</wv-navbar-item>
+    <wv-navbar-item id="item2">选项2</wv-navbar-item>
+    <wv-navbar-item id="item3">选项3</wv-navbar-item>
+  </wv-navbar>
+</template>
+```
+
+### 自定义激活指示线宽度
+
+```html
+<template>
+  <wv-navbar v-model="selected" @change="changed" :line-width="1">
+    <wv-navbar-item id="item1">选项1</wv-navbar-item>
+    <wv-navbar-item id="item2">选项2</wv-navbar-item>
+    <wv-navbar-item id="item3">选项3</wv-navbar-item>
+  </wv-navbar>
+</template>
+```
+
+### 禁用过渡动效 (v1.4.14 以上版本)
+
+```html
+<template>
+  <wv-navbar v-model="selected" @change="changed" :animate="false">
+    <wv-navbar-item id="item1">选项1</wv-navbar-item>
+    <wv-navbar-item id="item2">选项2</wv-navbar-item>
+    <wv-navbar-item id="item3">选项3</wv-navbar-item>
+  </wv-navbar>
+</template>
+```
+
+### 有禁用项
+
+```html
+<template>
+  <wv-navbar v-model="selected" @change="changed">
+    <wv-navbar-item id="item1">选项1</wv-navbar-item>
+    <wv-navbar-item id="item2">选项2</wv-navbar-item>
+    <wv-navbar-item id="item3" :disabled="disabled">选项3</wv-navbar-item>
+  </wv-navbar>
+</template>
 ```
 
 ## API
@@ -49,7 +83,8 @@ export default {
 | background-color  | String  |  选项卡背景色   |      |   '#fff'    |
 | active-color  | String  |  激活的选项卡项字色   |      |   '#2196f3'    |
 | disabled-color  | String  |  禁用的选项卡项字色   |      |   '#cfcfcf'    |
-| line-width  | Number  |  询问衬级宽度   |      |   3    |
+| line-width  | Number  |  询问衬级宽度   |      |   2    |
+| animate (v1.4.14 新增)  | Boolean  |  是否禁用过渡动效   |      |   false   |
 
 - navbar-item
 
