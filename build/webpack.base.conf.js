@@ -1,15 +1,4 @@
 var path = require('path')
-var marked = require('marked')
-var highlightjs = require('highlight.js')
-
-// md 代码高亮
-marked.setOptions({
-  highlight: function (code) {
-    return highlightjs.highlightAuto(code).value
-  }
-})
-
-var renderer = new marked.Renderer()
 
 module.exports = {
   entry: {
@@ -42,18 +31,7 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        // options: {
-        //   // lourders: {
-        //   //
-        //   // },
-        //   transformToRequire: {
-        //     video: 'src',
-        //     souce: 'src',
-        //     img: 'src',
-        //     image: 'xlink:href'
-        //   }
-        // }
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,

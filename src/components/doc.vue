@@ -43,8 +43,9 @@
 
       // 右侧 DEMO 区实在 sticky 效果
       document.addEventListener('scroll', (e) => {
-        if (document.body.scrollTop >= 70) {
-          this.demoWrapTop = document.body.scrollTop + 20
+        const scrollDistance = Math.abs(document.body.getBoundingClientRect().top)
+        if (scrollDistance >= 70) {
+          this.demoWrapTop = scrollDistance + 20
         } else {
           this.demoWrapTop = 90
         }
