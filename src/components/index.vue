@@ -1,9 +1,8 @@
 <template>
   <div class="main">
-    <div id="banner">
-    </div>
+    <div id="banner"></div>
     <div class="title">WE-VUE</div>
-    <div class="slogan">一套简单易用的 vue 组件。</div>
+    <div class="slogan">一套简单易用的 vue 组件</div>
     <router-link to="/doc" class="btn-quickstart">开始使用</router-link>
     <img class="qrcode" src="../assets/demo_qrcode.png" alt="">
   </div>
@@ -25,7 +24,6 @@
         minR: 0.2,
         maxSpeed: 1,
         minSpeed: 0.2,
-        // color: '#25bfff',
         lineWidth: 0.1,
         lineShape: 'spider',
         range: 1000,

@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div class="header">
     <div class="main">
       <router-link to="/">
         <img class="logo" src="../assets/logo.png" alt="">
@@ -36,7 +36,7 @@
     position: relative;
   }
 
-  #header {
+  .header {
     display: block;
     overflow: hidden;
     top: 0;
