@@ -80,8 +80,10 @@ Vue.component(Input.name, Input)
 | disabled | Boolean | 是否禁用 |      | false |
 | readonly | Boolean | 是否只读 |      | false |
 | required | Boolean | 是否必填 |      | false |
-| validate-mode | Object | 验证触发条件 |      | {onFocus: true, onBlur: true, onChange: true} |
+| validate-mode | Object | 验证触发条件 |      | {onFocus: true, onBlur: true, onChange: true, onInput: true} |
 | pattern | String | 验证规则（正则表达式） |      |  |
+
+> validate-mode 中 onInput 模式为 v1.4.15 新增
 
 ## Slots
 
