@@ -247,7 +247,7 @@ let navs = [
         doc: '../docs/badge.md'
       },
       {
-        title: '贡献',
+        title: '贡献指南',
         name: 'contributing',
         path: '/doc/contributing',
         doc: '../docs/badge.md'

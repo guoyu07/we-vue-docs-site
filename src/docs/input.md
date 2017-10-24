@@ -77,8 +77,12 @@ Vue.component(Input.name, Input)
 | label  | String  |  标签   |      |       |
 | tlabel-width  | Number  |  标签宽度   |      |   105    |
 | placeholder  | String  |  占位提示   |      |       |
-| disabled | Boolean | 是否禁用 |      | false |
-| readonly | Boolean | 是否只读 |      | false |
+| maxlength (v1.4.17+)  | Number  |  最大长度   |      |       |
+| minlength (v1.4.17+)  | Number  |  最小长度   |      |       |
+| disabled | Boolean | （原生属性）是否禁用 |      | false |
+| readonly | Boolean | （原生属性）是否只读 |      | false |
+| auto-complete (v1.4.17+) | Boolean | （原生属性）自动补全 |      | 'off' |
+| autofocus (v1.4.17+) | Boolean | （原生属性）自动获得输入焦点 |      | false |
 | required | Boolean | 是否必填 |      | false |
 | validate-mode | Object | 验证触发条件 |      | {onFocus: true, onBlur: true, onChange: true, onInput: true} |
 | pattern | String | 验证规则（正则表达式） |      |  |

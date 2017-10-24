@@ -51,9 +51,9 @@ Vue.component(Popup.name, Popup)
 
 |   参数   |   类型    |   说明   | 可选值  |  默认值  |
 | :----: | :-----: | :----: | :--: | :---: |
-| height  | Number/String  |  高度   |      |   'auto'    |
+| height  | Number/String  |  高度,可设置 %、px、vh 单位的高度   |      |   'auto'    |
 | hide-on-mask  | Boolean  |  点击遮罩层关闭弹出层   |      |   true    |
-| mask-background-color  | String  |  遮罩层背景色   |      |       |
+| mask-background-color  | String  |  遮罩层背景色   |      |   'rgba(0, 0, 0, 0.6)'    |
 | background-color  | String  |  弹出层背景色   |      |   '#fff'    |
 
 ## Slots
