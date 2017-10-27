@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="{ 'header-home': isHomepage }">
     <div class="main">
       <router-link to="/">
         <img class="logo" src="../assets/logo.png" alt="">
@@ -24,13 +24,20 @@
 
 <script>
   export default {
-    name: 'doc-header'
+    name: 'doc-header',
+
+    computed: {
+      isHomepage () {
+        return this.$route.path === '/'
+      }
+    }
   }
 </script>
 
 <style scoped lang="scss">
   $header-height: 70px;
   $header-background: #fff;
+  $header-home-background: #01081b;
 
   body {
     position: relative;
@@ -83,6 +90,14 @@
           }
         }
       }
+    }
+  }
+
+  .header-home {
+    background-color: $header-home-background;
+
+    .nav li a {
+      color: #fff;
     }
   }
 </style>
