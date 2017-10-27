@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "production": "node build/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo 0"
   },
   "author": "tianyong90",
   "email": "412039588@qq.com",
