@@ -6,13 +6,13 @@
       </router-link>
       <ul class="nav">
         <li>
-          <router-link to="/">首页</router-link>
+          <router-link to="/" active-class="active">首页</router-link>
         </li>
         <li>
-          <router-link to="/doc">文档</router-link>
+          <router-link to="/doc" active-class="active">文档</router-link>
         </li>
         <li>
-          <router-link to="/changelog">变更记录</router-link>
+          <router-link to="/changelog" active-class="active">变更记录</router-link>
         </li>
         <li>
           <a href="https://github.com/tianyong90/we-vue" target="new">GitHub</a>
@@ -36,8 +36,8 @@
 
 <style scoped lang="scss">
   $header-height: 70px;
-  $header-background: #fff;
-  $header-home-background: #01081b;
+  $header-background-color: #fff;
+  $header-home-background-color: #040f23;
 
   body {
     position: relative;
@@ -50,8 +50,7 @@
     left: 0;
     width: 100%;
     height: $header-height;
-    overflow: hidden;
-    background-color: $header-background;
+    background-color: $header-background-color;
     z-index: 100;
 
     .main {
@@ -88,13 +87,17 @@
           &:hover {
             color: #41b883;
           }
+
+          &.active {
+            color: #41b883;
+          }
         }
       }
     }
   }
 
   .header-home {
-    background-color: $header-home-background;
+    background-color: $header-home-background-color;
 
     .nav li a {
       color: #fff;
