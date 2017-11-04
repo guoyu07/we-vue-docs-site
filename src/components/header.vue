@@ -1,18 +1,18 @@
 <template>
   <div class="header" :class="{ 'header-home': isHomepage }">
     <div class="main">
-      <router-link to="/">
+      <router-link to="/" exact>
         <img class="logo" src="../assets/logo.png" alt="">
       </router-link>
       <ul class="nav">
         <li>
-          <router-link to="/" active-class="active">首页</router-link>
+          <router-link to="/" exact>首页</router-link>
         </li>
         <li>
-          <router-link to="/doc" active-class="active">文档</router-link>
+          <router-link to="/doc">文档</router-link>
         </li>
         <li>
-          <router-link to="/changelog" active-class="active">变更记录</router-link>
+          <router-link to="/changelog">变更记录</router-link>
         </li>
         <li>
           <a href="https://github.com/tianyong90/we-vue" target="new">GitHub</a>
@@ -88,7 +88,7 @@
             color: #41b883;
           }
 
-          &.active {
+          &.router-link-active {
             color: #41b883;
           }
         }

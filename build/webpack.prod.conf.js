@@ -6,6 +6,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -59,7 +60,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      inject: true,
+      inject: 'head',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -97,26 +98,15 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: 'static',
         ignore: ['.*']
       }
-    ])
-  ]
-})
-
-if (false) {
-  var CompressionWebpackPlugin = require('compression-webpack-plugin')
-
-  webpackConfig.plugins.push(
+    ]),
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
-      test: new RegExp(
-        '\\.(' +
-        config.build.productionGzipExtensions.join('|') +
-        ')$'
-      ),
+      test: /\.js$|\.html$/,
       threshold: 10240,
       minRatio: 0.8
     })
-  )
-}
+  ]
+})
 
 module.exports = webpackConfig
