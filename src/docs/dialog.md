@@ -61,6 +61,6 @@ Dialog.setDefaults({
 | title  | String  |  标题   |      |       |
 | message  | String  |  对话框消息   |      |       |
 | confirmText  | String  |  确认按钮文字   |      | '确定'    |
-| cacelText  | String  |  取消按钮文字   |      | '取消'    |
+| cancelText  | String  |  取消按钮文字   |      | '取消'    |
 | showConfirmBtn | Boolean | 显示确认按钮 |      | true |
-| showCacelBtn | Boolean | 显示取消按钮 |      | true |
+| showCancelBtn | Boolean | 显示取消按钮 |      | true |
